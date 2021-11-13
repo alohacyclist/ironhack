@@ -146,5 +146,10 @@ person1.teammates.push(person3) // adds person3 to person1 teammates
 person1.teammates = [person2]
 console.log(person1.teammates[0].name) // logs name of person1 teammate, which is person2 (Dieter)
 
+delete person3.age
+console.log(person3)
+
+person3.hobbies = ['programming', 'soccer']
+console.log(`${person3.name} likes ${person3.hobbies[1]} and ${person3.hobbies[0]}.`)
 
 
