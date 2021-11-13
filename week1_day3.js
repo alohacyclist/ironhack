@@ -88,3 +88,26 @@ const substract = (a, b) => {   // ARROW FUNCTION
 console.log(substract(33, 11)) // 22
 
 
+// SORTING NUMBERS ??? something wrong here!!!!!!!!!!!
+const sort = (array) => {
+    let resultArray = [...array]
+    for (let j = 0; j < resultArray.length; j++) {
+        for (let i = 0; i < resultArray.length; i++) {
+            if (resultArray[i] < resultArray[i + 1]) {
+                let arrayCopy = [...resultArray]
+                resultArray = arrayCopy[i + 1]
+                resultArray[i + 1] = arrayCopy[i]
+            }
+        }
+    }
+    return resultArray
+}
+console.log(sort(myNumbers))
+
+// FINISH THIS FUNCTION FROM LAB1:
+
+const whoGoesFirst (driver, navigator)
+
+
+// UNIT TESTING
+
