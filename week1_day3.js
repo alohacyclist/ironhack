@@ -106,8 +106,45 @@ console.log(sort(myNumbers))
 
 // FINISH THIS FUNCTION FROM LAB1:
 
-const whoGoesFirst (driver, navigator)
+//const whoGoesFirst (driver, navigator)
 
 
-// UNIT TESTING
+// objects
+
+let person1 = {
+    name: 'Christian',
+    age: 34,
+    jobs: ['dev', 'teacher'],
+    height: 1.81,
+    married: false
+}
+
+let person2 = {
+    name: 'Dieter',
+    age: 67,
+    jobs: ['retired'],
+    married: true,
+    teammates: [person1]
+}
+
+let person3 = {
+    name: 'Pia',
+    age: 27,
+    jobs: ['designer', 'dev', 'baker'],
+    married: 'divorced',
+    teammates: [person1, person2]
+}
+
+console.log(person1.name) // logs name of person1
+
+console.log(person2.teammates[0].jobs[1]) // this is dot notation
+console.log(person3['teammates'][0]['jobs'][1]) //  bracket notation
+
+person1.teammates = [] // add something to an existing object
+person1.teammates.push(person3) // adds person3 to person1 teammates
+
+person1.teammates = [person2]
+console.log(person1.teammates[0].name) // logs name of person1 teammate, which is person2 (Dieter)
+
+
 
