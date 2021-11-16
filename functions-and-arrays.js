@@ -207,8 +207,31 @@ function xProducts (matrixArr) {
 
 
 function greatestProduct (matrixArr) {
-  return xProducts(matrixArr);
-  return yProducts(matrixArr);
+  return xProducts(matrixArr) > yProducts(matrixArr) ? xProducts(matrixArr) : yProducts(matrixArr);
+}
+
+let leftToRightDiagonalProduct = []
+function greatestDiagonalProductLeftRight (matrixArr) {
+  for(let j = 0; j < matrixArr.length - 3; j++) {
+    for(let i = 0; i < matrixArr.length - 3; i++) {
+      leftToRightDiagonalProduct.push(matrixArr[j][i] * matrixArr[j + 1][i + 1] * matrixArr[j + 2][i + 2] * matrixArr[j + 3][i + 3])
+    }
+  }
+  return biggestLeftToRightDiagonalProduct = Math.max(...leftToRightDiagonalProduct)
+}
+
+let rightToLeftDiagonalProduct = []
+function greatestDiagonalProductRightLeft (matrixArr) {
+  for(let j = 0; j < matrixArr.length; j++) {
+    for(let i = matrixArr.length; i > 3; i--) {
+      rightToLeftDiagonalProduct.push(matrixArr[j][i] * matrixArr[j + 1][i - 1] * matrixArr[j + 2][i - 2] * matrixArr[j + 3][i - 3])
+    }
+  }
+  return biggestLeftToRightDiagonalProduct = Math.max(...leftToRightDiagonalProduct)
+}
+
+function biggestDiagonalProduct (matrixArr) {
+
 }
 
 
