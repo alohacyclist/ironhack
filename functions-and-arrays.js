@@ -181,9 +181,35 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+let x = [];
+let biggestX;
+function xProducts (matrixArr) {
+  for (let j = 0; j < matrixArr.length; j++) {
+    for(let i = 0; i < matrixArr[j].length - 3; i++) {
+     x.push(matrixArr[j][i] * matrixArr[j][i + 1] * matrixArr[j][i + 2] * matrixArr[j][i + 3])
+   }  
+  }
+  return biggestX = Math.max(...x)
+ }
+ 
+ 
+ let y = [];
+ let biggestY;
+ function yProducts (matrixArr) {
+   for (let j = 0; j < matrixArr.length - 3; j++) {
+     for(let i = 0; i < matrixArr.length; i++) {
+       y.push(matrixArr[j][i] * matrixArr[j + 1][i] * matrixArr[j + 2][i] * matrixArr[j + 3][i])
+     }
+   }
+   return biggestY = Math.max(...y)
+ }
+ 
 
 
+function greatestProduct (matrixArr) {
+  return xProducts(matrixArr);
+  return yProducts(matrixArr);
+}
 
 
 // The following is required to make unit tests work.
