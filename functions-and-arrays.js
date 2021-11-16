@@ -231,7 +231,7 @@ function greatestDiagonalProductRightLeft (matrixArr) {
 }
 
 function biggestDiagonalProduct (matrixArr) {
-
+  return greatestDiagonalProductLeftRight (matrixArr) > greatestDiagonalProductRightLeft (matrixArr) ? greatestDiagonalProductLeftRight (matrixArr) : greatestDiagonalProductRightLeft (matrixArr);
 }
 
 
